@@ -1,0 +1,83 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    overflow: hidden;
+}
+.grid{
+    display: grid;
+    grid-template-areas: 'grid1 grid1 grid1 grid2 grid3'
+                        'grid5 grid4 grid4 grid4  grid3' ;
+    grid-gap: 2rem;
+    margin: 1.5rem;
+    justify-content: space-between;
+}
+.grid1, .grid2, .grid3, .grid4, .grid5{
+    border-radius: 0.8rem;
+}
+.grid1{
+    grid-area: grid1;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    padding: 1.3rem;
+}
+.grid2{
+    grid-area: grid2;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+    padding: 1.3rem;
+}
+.grid3, .grid5{
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+    padding: 1.3rem;
+}
+.grid3{
+    grid-area: grid5;
+}
+.grid4{
+    grid-area: grid4;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+    padding: 1.3rem;
+}
+.grid5{
+    grid-area: grid3;
+}
+.user img{
+    float: left;
+    margin-right: 1.2rem;
+    border-radius: 50%;
+}
+.name h5{
+    font-weight: lighter;
+}
+.heading{
+    margin: 1.5rem 0;
+}
+
+@media(max-width : 600px){
+    .grid{
+        grid-template-areas: 
+        'grid1 grid1 grid1 grid1 grid1'
+        'grid2 grid2 grid2 grid2 grid2'
+        'grid3 grid3 grid3 grid3 grid3'
+        'grid4 grid4 grid4 grid4 grid4'
+        'grid5 grid5 grid5 grid5 grid5';
+    }
+}
+@media(max-width : 1024px){
+    .grid{
+        grid-template-areas: 
+        'grid1 grid1 grid1 grid1 grid1'
+        'grid2 grid2 grid2 grid2 grid2'
+        'grid3 grid3 grid3 grid3 grid3'
+        'grid4 grid4 grid4 grid4 grid4'
+        'grid5 grid5 grid5 grid5 grid5';
+    }
+}
